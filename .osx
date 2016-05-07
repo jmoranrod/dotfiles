@@ -144,7 +144,7 @@ sudo touch /private/var/vm/sleepimage
 sudo chflags uchg /private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
-sudo pmset -a sms 0
+#sudo pmset -a sms 0
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -186,13 +186,13 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
+#defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
+#defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
+#defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+#defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
+#sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -263,7 +263,7 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+#defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Enable spring loading for directories
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
@@ -327,8 +327,8 @@ chflags nohidden ~/Library
 sudo chflags nohidden /Volumes
 
 # Remove Dropbox’s green checkmark icons in Finder
-file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
-[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
+#file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
+#[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -756,7 +756,7 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 ###############################################################################
 
 # Install Sublime Text settings
-cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+#cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 ###############################################################################
 # Transmission.app                                                            #
